@@ -7,12 +7,12 @@ from snowflake.snowpark.functions import col
 # Write directly to the app
 st.title(f":cup_with_straw: WWE Superstar Data :cup_with_straw: {st.__version__}")
 st.write(
-  """Know your superstar by entering their name here
+  """Know your Superstar
   """
 )
 
-superstar = st.text_input("Name of Superstar")
-st.write("You want to know about - ", superstar)
+superstar = st.text_input("Enter the name of Superstar")
+st.write(superstar)
 
 cnx = st.connection("snowflake")
 session = cnx.session()
