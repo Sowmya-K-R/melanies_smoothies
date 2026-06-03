@@ -17,6 +17,11 @@ st.write(superstar)
 cnx = st.connection("snowflake")
 session = cnx.session()
 my_dataframe = session.table("ss.public.superstars").select(col('SUPERSTAR'))
+
+
+my_dataframe = session.table("ss.public.superstars")
+st.dataframe(my_dataframe, use_container_width=True)
+
 st.stop()
 #st.dataframe(data=my_dataframe, use_container_width=True)
 #st.stop()
