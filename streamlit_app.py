@@ -4,13 +4,6 @@ import requests
 # from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
 
-import kagglehub
-
-# Download latest version
-path = kagglehub.dataset_download("waqi786/wwe-champion-dataset")
-
-print("Path to dataset files:", path)
-st.stop()
 # Write directly to the app
 st.title(f":cup_with_straw: Customize your smoothie! :cup_with_straw: {st.__version__}")
 st.write(
