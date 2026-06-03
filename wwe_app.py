@@ -18,11 +18,15 @@ cnx = st.connection("snowflake")
 session = cnx.session()
 my_dataframe = session.table("ss.public.superstars").select(col('SUPERSTAR'))
 
+if superstar:
+    player_info = session.table("ss.public.superstars").filter(col('SUPERSTAR') == superstar)
+    st.dataframe(player_info, use_container_width=True)
 
+st.stop()
 my_dataframe = session.table("ss.public.superstars")
 st.dataframe(my_dataframe, use_container_width=True)
 
-st.stop()
+
 #st.dataframe(data=my_dataframe, use_container_width=True)
 #st.stop()
 
