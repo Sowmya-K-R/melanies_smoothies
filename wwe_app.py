@@ -5,7 +5,7 @@ import requests
 from snowflake.snowpark.functions import col
 
 # Write directly to the app
-st.title(f":cup_with_straw: WWE Superstar Data :cup_with_straw: {st.__version__}")
+st.title(f":muscle: WWE Superstar Data :muscle: {st.__version__}")
 st.write(
   """Know your Superstar
   """
